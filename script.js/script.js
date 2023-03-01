@@ -41,3 +41,12 @@ function showNextImg() {
   // Define a nova imagem atual
   mainImg.src = thumbImgs[currentImgIndex].src;
 }
+
+const thumbs = document.querySelectorAll('.thumb_img_list li img');
+
+thumbs.forEach(thumb => {
+  thumb.addEventListener('click', function() {
+    const mainImg = document.getElementById('mainImg');
+    mainImg.src = thumb.src;
+  });
+});
